@@ -71,7 +71,7 @@ Open a new terminal window, navigate to the `backend` folder:
     cd backend
 and start the backend server:
 ######
-    npm run
+    npm start
 
 ### Step 3: Start the Frontend Development Server
 Open another terminal window, navigate to the `frontend` folder:
@@ -86,6 +86,14 @@ Once both servers are running, open your browser and navigate to:
 ######
     http://localhost:5713
 This will load the Alumni Management System web application.
+
+## Collaborators
+
+We're grateful for the contributions of the following collaborators:
+
+- [Dhanush Gowda H M](https://github.com/dhanushgowdahm) - Played a crucial role in integrating the backend services.
+- [Hemashree S S](https://github.com/hemashree18) - Contributed significantly to the frontend development.
+- [Sumanth M](https://github.com/Sumanth1116) - Provided essential guidance on improving the overall architecture of the project.
 
 ## Development Environment Setup
 To ensure smooth development, it's recommended to use a code editor like Visual Studio Code, which supports JavaScript, Node.js, and React.js development.
