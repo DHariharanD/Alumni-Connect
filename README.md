@@ -89,7 +89,7 @@ This will load the Alumni Management System web application.
 
 ## Collaborators
 
-We're grateful for the contributions of the following collaborators:
+I am grateful for the contributions of the following collaborators and friends:
 
 - [Dhanush Gowda H M](https://github.com/dhanushgowdahm) - Played a crucial role in integrating the backend services.
 - [Hemashree S S](https://github.com/hemashree18) - Contributed significantly to the frontend development.
