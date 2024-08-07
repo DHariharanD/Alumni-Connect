@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+<<<<<<< HEAD
 import API from '../services/api'; // Ensure this is correctly imported
+=======
+import API from '../services/api';
+>>>>>>> d7d7588074994b7c7aa7dc1cee7c00a47ca67dd9
 
 const Home = () => {
   const [userData, setUserData] = useState({});
@@ -37,6 +41,7 @@ const Home = () => {
   };
 
   const handleResponse = async (eventId, response) => {
+<<<<<<< HEAD
     setResponses(prevResponses => ({
       ...prevResponses,
       [eventId]: response
@@ -54,12 +59,23 @@ const Home = () => {
       } catch (err) {
         console.error('Failed to update attendance:', err);
       }
+=======
+    try {
+      await API.post('/events/respond', { eventId, userId: userData._id, response });
+      setResponses(prevResponses => ({
+        ...prevResponses,
+        [eventId]: response
+      }));
+    } catch (err) {
+      console.error(err);
+>>>>>>> d7d7588074994b7c7aa7dc1cee7c00a47ca67dd9
     }
   };
 
   return (
     <div className="min-h-screen bg-gray-100 p-6">
       <div className="container mx-auto">
+<<<<<<< HEAD
         <div className="flex flex-col justify-center mb-8">
           <img src="https://pesce.ac.in/img/pes%20logo%201.svg" alt="Logo" className="h-20" />
           <br />
@@ -89,6 +105,10 @@ const Home = () => {
             </div>
           </div>
         </div>
+=======
+        {/* Existing UI elements remain unchanged */}
+
+>>>>>>> d7d7588074994b7c7aa7dc1cee7c00a47ca67dd9
         <div className="bg-white shadow-md rounded-lg p-6">
           <h2 className="text-2xl font-semibold text-gray-700 mb-4">Events:</h2>
           <ul className="space-y-4">
@@ -97,7 +117,11 @@ const Home = () => {
                 <h3 className="text-lg font-semibold text-gray-800"><span className='text-green-500'>Event: </span>{event.title}</h3>
                 <p className="text-sm text-gray-600 break-words"><span className='text-green-500'>Details: </span>{event.description}</p>
                 <p className="text-sm text-gray-600"><span className='text-green-500'>Date: </span>{new Date(event.date).toLocaleDateString()}</p>
+<<<<<<< HEAD
                 <div className="flex justify-between items-center mt-4">
+=======
+                <div className="flex justify-center mt-4">
+>>>>>>> d7d7588074994b7c7aa7dc1cee7c00a47ca67dd9
                   {responses[event._id] ? (
                     <p className="text-lg font-medium text-gray-800">{responses[event._id] === 'attend' ? 'You are attending this event.' : 'You are Not Attending this event.'}</p>
                   ) : (
@@ -116,10 +140,13 @@ const Home = () => {
                       </button>
                     </>
                   )}
+<<<<<<< HEAD
                   <div className="flex items-center">
                     <p className="text-lg font-medium text-gray-800 mr-2">Number of Attendees:</p>
                     <span className="text-lg font-bold text-gray-800">{event.incrementingValue || 0}</span>
                   </div>
+=======
+>>>>>>> d7d7588074994b7c7aa7dc1cee7c00a47ca67dd9
                 </div>
               </li>
             ))}

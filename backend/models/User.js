@@ -11,7 +11,10 @@ const UserSchema = new mongoose.Schema({
   department: { type: String },
   currentCompany: { type: String },
   contactNumber: { type: String },
+<<<<<<< HEAD
   confirmedevents: [{ type: String }],
+=======
+>>>>>>> d7d7588074994b7c7aa7dc1cee7c00a47ca67dd9
 });
 
 module.exports = mongoose.model('User', UserSchema);
